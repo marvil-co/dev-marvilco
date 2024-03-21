@@ -1,0 +1,98 @@
+@keyframes navbarPop {
+    0% { border-radius: 3rem; inset: 1.5rem; }
+    20% { border-radius: 1rem; inset: 0; transform: translateY(-5px); }
+    50% { border-radius: 0; transform: translateY(3px); }
+    75% { transform: translateY(-2px); }
+    100% { border-radius: 0; inset: 0; transform: translateY(0px); } }
+@keyframes navbarFloat {
+    0% { border-radius: 4rem; inset: 2rem; }
+    50% { border-radius: 3.25rem; inset: 1.625rem; }
+    100% { border-radius: 3rem; inset: 1.5rem; } }
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --primary: #b524ea;
+    --background: #19101c;
+
+    --navbar: #361a40;
+}
+::selection { background-color: var(--primary); color: var(--white) }
+::-webkit-scrollbar-track { background-color: var(--navbar); }
+::-webkit-scrollbar-thumb { background-color: var(--primary); border-radius: 1rem; }
+::-webkit-scrollbar { width: 0.5rem; }
+
+body,
+html {
+    background-color: var(--background);
+    color: var(--white);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    height: 300%;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    /* TODO: change to hidden (Overflow is programatically set to Auto after loading screen) */
+}
+
+.animated { transition: all 0.2s; }
+strong { color: var(--primary); }
+
+
+
+
+
+/*
+*
+*      _   _       __      __ ____            _____
+*     | \ | |    /\\ \    / /|  _ \    /\    |  __ \
+*     |  \| |   /  \\ \  / / | |_) |  /  \   | |__) |
+*     | . ` |  / /\ \\ \/ /  |  _ <  / /\ \  |  _  /
+*     | |\  | / ____ \\  /   | |_) |/ ____ \ | | \ \
+*     |_| \_|/_/    \_\\/    |____//_/    \_\|_|  \_\
+*
+*
+*/ 
+/* #region Navbar */
+#navbar {
+    align-items: center;
+    background-color: var(--navbar);
+    border-radius: 4rem;
+    display: flex;
+    height: 4rem;
+    inset: 2rem;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    transition: all 0.5s ease-in-out;
+    z-index: 500; }
+#navbar.navbarFloat { animation: navbarFloat both ease-in-out; animation-name: navbarFloat;
+    animation-timeline: scroll(); animation-range: 50px 500px; }
+#navbar.navbarPop { animation: navbarPop both cubic-bezier(0.77, 0, 0.175, 1) forwards; animation-name: navbarPop;
+    animation-timeline: scroll(); animation-range: 50px 500px; }
+
+.logo-container { margin-left: 0.35rem; } .logo { height: 4rem; width: 10.92rem; }
+.links-icon { height: 2rem; margin: 1rem; width: 2rem; } .links-icon:hover { transform: scale(1.1); }
+/* #endregion */
+
+
+
+
+
+/* 
+*      _    _  ______  _____    ____  
+*     | |  | ||  ____||  __ \  / __ \ 
+*     | |__| || |__   | |__) || |  | |
+*     |  __  ||  __|  |  _  / | |  | |
+*     | |  | || |____ | | \ \ | |__| |
+*     |_|  |_||______||_|  \_\ \____/ 
+*                                     
+*                                     
+*/
+/* #region Hero */
+
+.hero-image {
+    transition: all 0.1s ease-out;
+  }
+
+/* #endregion */
