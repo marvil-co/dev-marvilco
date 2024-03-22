@@ -19,7 +19,7 @@ window.onload = () => {
         });
 
         animation.finished.then(() => {
-            loadingScreen.style.top = '-100%';
+            loadingScreen.style.transform = 'translateY(-100%)';
             document.body.style.overflow = 'auto';
             document.documentElement.style.overflow = 'auto';
         });
