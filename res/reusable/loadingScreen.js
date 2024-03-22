@@ -2,11 +2,7 @@ let loadingScreenDuration = 500; // Duration of the loading screen in millisecon
 
 window.onload = () => {
     const logo = document.querySelector('.loadingScreen-hexagon');
-    
-    // Hint to the browser that these properties will change
     const loadingScreen = document.querySelector('.loadingScreen');
-
-    // Stop the current CSS animation and get the current scale
     const currentScale = getCurrentScale(logo);
     logo.style.animation = 'none'; // Stop the CSS animation to capture the current state
 
@@ -24,13 +20,13 @@ window.onload = () => {
 
         animation.finished.then(() => {
             loadingScreen.style.top = '-100%';
-
             document.body.style.overflow = 'auto';
             document.documentElement.style.overflow = 'auto';
         });
     };
     
-    setTimeout(adjustAndFadeLogo, 100); // Start adjusting and fading the logo after a brief moment
+    adjustAndFadeLogo();
+    // setTimeout(adjustAndFadeLogo, 100); // Start adjusting and fading the logo after a brief moment
 };
 
 // Function to extract the current scale of an element

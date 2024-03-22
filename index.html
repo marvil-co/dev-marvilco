@@ -40,7 +40,7 @@
     <style type="text/css"> 
         @keyframes growshrink { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
         .loadingScreen {
-            background-color: black; width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; z-index: 1000;
+            background-color: black; width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; z-index: 1000; will-change: transform;
             display: flex; flex-direction: column; justify-content: center; align-items: center; transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1); }
         .loadingScreen-hexagon 
         { width:100px; height: 112px; background-color: #b524ea; animation: growshrink 2s ease-in-out infinite;
@@ -56,7 +56,7 @@
 </head>
 <body>
     <!-- Others -->
-    <div class="loadingScreen"> <!-- TODO: remove display: none -->
+    <div class="loadingScreen">
         <div class="loadingScreen-hexagon"></div>
         <div class="loadingScreen-message">
             <svg style="display: none;" class="LSM-siftingThroughToolboxParent" id="loadingScreen-message-stt" viewBox="0 0 227.94 16">
