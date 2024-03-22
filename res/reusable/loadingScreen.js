@@ -4,9 +4,7 @@ window.onload = () => {
     const logo = document.querySelector('.loadingScreen-hexagon');
     
     // Hint to the browser that these properties will change
-    logo.style.willChange = 'transform, opacity';
     const loadingScreen = document.querySelector('.loadingScreen');
-    loadingScreen.style.willChange = 'top';
 
     // Stop the current CSS animation and get the current scale
     const currentScale = getCurrentScale(logo);
@@ -25,7 +23,6 @@ window.onload = () => {
         });
 
         animation.finished.then(() => {
-            loadingScreen.style.transition = 'top 0.5s cubic-bezier(0.77, 0, 0.175, 1)';
             loadingScreen.style.top = '-100%';
 
             document.body.style.overflow = 'auto';
