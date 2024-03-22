@@ -40,12 +40,12 @@
     <style type="text/css"> 
         @keyframes growshrink { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
         .loadingScreen {
-            background-color: black; width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; z-index: 1000; will-change: transform;
+            background-color: black; width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; z-index: 1000; will-change: transform; transform: translateZ(0);
             display: flex; flex-direction: column; justify-content: center; align-items: center; transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1); }
         .loadingScreen-hexagon 
         { width:100px; height: 112px; background-color: #b524ea; animation: growshrink 2s ease-in-out infinite;
             clip-path: polygon(50px 12.63px, 87.84px 34.47px, 87.84px 78.13px, 50px 99.97px, 12.16px 78.13px, 12.16px 34.47px, 50px 12.63px, 50px 0px, 50px 0px, 49.52888px 0.01229px, 49.05824px 0.04912px, 48.58916px 0.11043px, 48.12272px 0.19616px, 47.66px 0.30625px, 47.20208px 0.44064px, 46.75004px 0.59927px, 46.30496px 0.78208px, 45.86792px 0.98901px, 45.44px 1.22px, 4.56px 24.81px, 4.56px 24.81px, 3.74706px 25.33927px, 3.00288px 25.94456px, 2.33142px 26.61909px, 1.73664px 27.35608px, 1.2225px 28.14875px, 0.79296px 28.99032px, 0.45198px 29.87401px, 0.20352px 30.79304px, 0.05154px 31.74063px, 6.4341467582089E-32px 32.71px, 0px 79.89px, 0px 79.89px, 0.05154px 80.85937px, 0.20352px 81.80696px, 0.45198px 82.72599px, 0.79296px 83.60968px, 1.2225px 84.45125px, 1.73664px 85.24392px, 2.33142px 85.98091px, 3.00288px 86.65544px, 3.74706px 87.26073px, 4.56px 87.79px, 45.44px 111.38px, 45.44px 111.38px, 45.86765px 111.61099px, 46.304px 111.81792px, 46.74815px 112.00073px, 47.1992px 112.15936px, 47.65625px 112.29375px, 48.1184px 112.40384px, 48.58475px 112.48957px, 49.0544px 112.55088px, 49.52645px 112.58771px, 50px 112.6px, 50px 112.6px, 50.47355px 112.58771px, 50.9456px 112.55088px, 51.41525px 112.48957px, 51.8816px 112.40384px, 52.34375px 112.29375px, 52.8008px 112.15936px, 53.25185px 112.00073px, 53.696px 111.81792px, 54.13235px 111.61099px, 54.56px 111.38px, 95.44px 87.79px, 95.44px 87.79px, 96.25294px 87.26073px, 96.99712px 86.65544px, 97.66858px 85.98091px, 98.26336px 85.24392px, 98.7775px 84.45125px, 99.20704px 83.60968px, 99.54802px 82.72599px, 99.79648px 81.80696px, 99.94846px 80.85937px, 100px 79.89px, 100px 32.72px, 100px 32.72px, 99.94846px 31.75063px, 99.79648px 30.80304px, 99.54802px 29.88401px, 99.20704px 29.00032px, 98.7775px 28.15875px, 98.26336px 27.36608px, 97.66858px 26.62909px, 96.99712px 25.95456px, 96.25294px 25.34927px, 95.44px 24.82px, 54.56px 1.22px, 54.56px 1.22px, 54.13235px 0.98901px, 53.696px 0.78208px, 53.25185px 0.59927px, 52.8008px 0.44064px, 52.34375px 0.30625px, 51.8816px 0.19616px, 51.41525px 0.11043px, 50.9456px 0.04912px, 50.47355px 0.01229px, 50px 1.5160920522216E-32px, 50px 0px);
-            will-change: transform, opacity; }
+            will-change: transform, opacity; transform: translateZ(0); }
         .loadingScreen-message { height: 25px; fill: white; margin-top: 32px; }
         .LSM-siftingThroughToolboxParent { width: 356px; }
         .LSM-welcomeMatParent { width: 320px; }
@@ -363,7 +363,7 @@
         </div>
     </div>
 
-    <script src="res/reusable/loadingScreen.js"></script>
+    <!-- <script src="res/reusable/loadingScreen.js"></script> -->
     <script src="res/reusable/navbar.js"></script>
 </body>
 </html>
